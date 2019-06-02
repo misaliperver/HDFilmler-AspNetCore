@@ -1,0 +1,243 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    color: rgb(227, 227, 240);
+    padding-top: 50px;
+    background-image: radial-gradient(circle farthest-corner at center, #3C4B57 0%, #1C262B 100%);
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    animation: fadeIn .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/***** leftmenucard */
+.leftmenucard{
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+}
+.photofilm{
+    width: 150px;
+}
+.cardfilms{
+    margin-bottom:3px; border: 1px solid #f5f5f5; padding: 5px; cursor: pointer;
+}
+.cardfilms:hover{
+    padding-left: 12px;
+}
+
+
+/***** loader ****/
+
+.loader {
+    top:0px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    perspective: 800px;
+}
+  
+.inner {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;  
+}
+  
+.inner.one {
+left: 0%;
+top: 0%;
+animation: rotate-one 1s linear infinite;
+border-bottom: 3px solid #EFEFFA;
+}
+
+.inner.two {
+right: 0%;
+top: 0%;
+animation: rotate-two 1s linear infinite;
+border-right: 3px solid #EFEFFA;
+}
+  
+.inner.three {
+right: 0%;
+bottom: 0%;
+animation: rotate-three 1s linear infinite;
+border-top: 3px solid #EFEFFA;
+}
+
+@keyframes rotate-one {
+0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+}
+100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+}
+}
+
+@keyframes rotate-two {
+0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+}
+100% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+}
+}
+
+@keyframes rotate-three {
+0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+}
+100% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+}
+}
+
+/***** /loader ****/
+
+/**** card-animaiton ****/
+
+.well {
+    margin-top:-20px;
+    background-color:#007FBD;
+    border:2px solid #0077B2;
+    text-align:center;
+    cursor:pointer;
+    font-size: 25px;
+    padding: 15px;
+    border-radius: 0px !important;
+}
+
+.well:hover {
+    margin-top:-20px;
+    background-color:#0077B2;
+    border:2px solid #0077B2;
+    text-align:center;
+    cursor:pointer;
+    font-size: 25px;
+    padding: 15px;
+    border-radius: 0px !important;
+    border-bottom : 2px solid rgba(97, 203, 255, 0.65);
+}
+
+body {
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 14px;
+line-height: 1.42857143;
+color: #fff;
+background-color: #F1F1F1;
+}
+
+
+
+.bg_blur
+{
+    background-image:url('http://data2.whicdn.com/images/139218968/large.jpg');
+    height: 300px;
+    background-size: cover;
+}
+
+.header{
+    color : #808080;
+    margin-left:10%;
+    margin-top:70px;
+}
+
+.picture{
+    height:150px;
+    width:150px;
+    position:absolute;
+    top: 75px;
+    left:-75px;
+}
+
+.picture_mob{
+    position: absolute;
+    width: 35%;
+    left: 35%;
+    bottom: 70%;
+}
+
+.btn-style{
+    color: #fff;
+    background-color: #007FBE;
+    border-color: #adadad;
+    width: 33.3%;
+}
+
+.btn-style:hover {
+    color: #333;
+    background-color: #3D5DE0;
+    border-color: #adadad;
+    width: 33.3%;
+   
+}
+
+
+@media (max-width: 767px) {
+    .header{
+        text-align : center;
+    }
+    
+    
+    
+    .nav{
+        margin-top : 30px;
+    }
+}
+
+
+
+/***** Footer *****/
+
+footer { background-image: url('/images/general/footer.jpg'); color: #ddd; }
+
+.footer-top { padding: 60px 0 40px 0; text-align: left; }
+.footer-top h3 { padding-bottom: 10px; }
+
+.footer-contact p { word-wrap: break-word;  }
+.footer-contact i { padding-right: 10px; font-size: 18px; color: #ddd; }
+.footer-contact p a { border-bottom: 1px dashed rgb(255, 255, 255); }
+.footer-contact p a:hover, .footer-contact p a:focus { border-bottom: 1px dashed #856dc0; }
+
+.footer-links a { color: rgb(246, 246, 246); border: 0; }
+.footer-links a:hover, .footer-links a:focus { color: #555; margin-left: 3px; color: #ddd; }
+
+.footer-bottom { padding: 0 0 60px 0; }
+
+.footer-social a { margin: 0 10px; color: #bbb; border: 0; }
+.footer-social a:hover, .footer-social a:focus { color: #856dc0; border: 0; }
+.footer-social i { font-size: 24px; vertical-align: middle; }
+
+/***** /Footer *****/
+
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+

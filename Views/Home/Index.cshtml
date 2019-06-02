@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Movies HomePage";
+}
+@model IEnumerable<Movie>
+
+<div class="row">
+    <div class="col-md-4">
+       <div class="card leftmenucard">
+            <div class="card-header">
+                <h4>Film Listesi</h4>
+            </div>
+            <ul class="list-group list-group-flush">
+                @foreach (var movie in Model)
+                {
+                    <li class="list-group-item"><a asp-action="Details" asp-controller="Home" asp-route-id="@movie.Id">@movie.Name</a></li>
+                }
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-8">
+        @foreach (var movie in Model)
+        {
+            <div class="card cardfilms" onclick="window.location.href='/Home/Details/@movie.Id'">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="@movie.ImgUrl" class="card-img photofilm" alt="@movie.Name">
+                    </div>
+                    <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>@movie.Name</strong></h5>
+                        <p class="clearfix">
+                            <a class="card-text" style="float:left">
+                                imdb:<small class="text-muted">@movie.imdbpoint/10</small>
+                            </a>
+                            <a class="card-text"  style="float:right;">
+                                <small class="text-muted">@movie.UploadDate.ToString("dd.MM.yyyy")</small>
+                            </a>
+                        </p>
+                        <p class="card-text">@movie.Description</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
